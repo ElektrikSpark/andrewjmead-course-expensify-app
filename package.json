@@ -10,7 +10,9 @@
     "dev-server": "webpack-dev-server --mode development --open --hot",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "test": "jest",
-    "test-w": "jest --watch"
+    "test-w": "jest --watch",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +28,7 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^0.28.11",
+    "express": "^4.16.3",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "jest": "^22.4.3",
     "moment": "^2.22.1",
