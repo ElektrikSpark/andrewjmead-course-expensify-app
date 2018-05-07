@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production --env production",
     "watch": "webpack --mode production --watch",
-    "dev-server-d": "webpack-dev-server --mode development --open --hot",
-    "dev-server-p": "webpack-dev-server --mode production",
+    "dev-server": "webpack-dev-server --mode development --open --hot",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "test": "jest",
     "test-w": "jest --watch"
@@ -27,6 +26,7 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "jest": "^22.4.3",
     "moment": "^2.22.1",
     "node-sass": "^4.7.2",
